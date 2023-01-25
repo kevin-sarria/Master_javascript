@@ -1,0 +1,97 @@
+<h2>{{titulo}}</h2>
+
+
+
+<p>Añadir marca</p>
+<br>
+<input type="text" [(ngModel)]="mi_marca" (keyUp.enter)="mostrarPalabra()"/>
+<button (click)="getMarca()">Obtener Marca</button>
+<br>
+<br>
+<button (click)="addMarca()">Añadir Marca</button>
+<br>
+<p>{{mi_marca}}</p>
+
+
+
+
+
+
+
+<h3>Compra las zapatillas de las mejores marcas</h3>
+
+
+<ul>
+    <li *ngFor="let marca of marcas; let indice = index;">
+        {{indice + " " + marca}}
+        <button (click)="borrarMarca(indice)">Borrar Marca</button>
+    </li>
+</ul>
+
+
+
+<ul>
+
+
+
+    <li *ngFor="let deportiva of zapatillas">
+
+        <span [ngStyle]="{
+                'text-decoration': !deportiva.stock ? 'line-through' : 'none'
+            }">
+
+            {{ deportiva.nombre }} - <strong 
+            [class.altoPrecio]="deportiva.precio >= 80"
+            [ngClass] = "{
+                'fondoRojo': deportiva.precio > 100,
+                'subrayado': deportiva.marca == 'Nike'
+            }"
+            >{{ deportiva.precio }}</strong>
+
+        </span>
+
+        <span *ngIf="deportiva.precio <= 80" [style.background]="deportiva.precio <= 80 ? 'red': 'transparent'"
+        [style.color]="deportiva.precio <= 80 ? 'white': 'black'">¡¡En Oferta!!</span>
+
+
+
+    </li>
+
+
+
+
+
+</ul>
+
+<p>El color de la mayoria de nuestras zapatillas es:</p>
+
+<input type="text" [(ngModel)]="color">
+
+<ul [ngSwitch]="color">
+    <li *ngSwitchCase="'yellow'">
+        El color predominante es el <span [ngStyle]="{
+            background: color
+        }">Amarillo</span> 
+    </li>
+    <li *ngSwitchCase="'red'">
+        El color predominante es el <span [ngStyle]="{
+            background: color
+        }">Rojo</span> 
+    </li>
+    <li *ngSwitchCase="'blue'">
+        El color predominante es el <span [ngStyle]="{
+            background: color
+        }">Azul</span> 
+    </li>
+    <li *ngSwitchCase="'orange'">
+        El color predominante es el <span [ngStyle]="{
+            background: color
+        }">Naranja </span> 
+    </li>
+</ul>
+
+
+
+
+
+
