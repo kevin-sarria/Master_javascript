@@ -1,0 +1,36 @@
+<header>
+  <ul>
+    <li><a [routerLink]="['']" >Sobre Mi</a></li>
+    <li><a [routerLink]="['/project']" [routerLinkActive]="['actived']" >Proyectos</a></li>
+    <li class="logo"><a href="#">KS</a></li>
+    <li><a [routerLink]="['/create']" [routerLinkActive]="['actived']" >Crear Proyectos</a></li>
+    <li><a [routerLink]="['/contact']" [routerLinkActive]="['actived']" >Contacto</a></li>
+  </ul>
+</header>
+
+
+
+<main>
+
+  <section id="content">
+
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+    
+  </section>
+
+</main>
+
+
+
+
+
+
+
+
+
+
+<footer>
+    Todos los derechos reservados &copy;
+</footer>

@@ -1,0 +1,383 @@
+
+/* Importar fuentes personalizadas */
+
+@font-face {
+    font-family: "yanone";
+    src: url('../fonts/yanone.ttf');
+}
+
+@font-face {
+    font-family: "finger";
+    src: url('../fonts/finger.ttf');
+}
+
+@font-face {
+    font-family: "titilium";
+    src: url('../fonts/titilium.ttf');
+}
+
+/* Generales */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "yanone";
+    font-size: 20px;
+    background-image: url('../img/pattern.png');
+    background-attachment: fixed;
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+
+
+/* Barra de navegación o cabecera */
+
+
+
+
+
+header {
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 6rem;
+    background-color: rgba(53, 103, 164, 1);
+    position: fixed;
+    text-transform: uppercase;
+}
+
+
+header ul {
+    display: block;
+    text-align: center;
+    width: 90%;
+    height: inherit;
+    margin: 0 auto;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 90px;
+}
+
+header a{
+    display: block;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: inherit;
+    text-decoration: none;
+    color: white;
+    transition: all 300ms;
+}
+
+header a:hover,
+.actived {
+    background-color: rgba(23, 108, 211, 0.8);
+}
+
+.logo {
+    font-family: "finger";
+    font-size: 30px;
+}
+
+.logo a {
+    transition: color 500ms, transform 500ms;
+}
+
+.logo a:hover {    
+    background-color: transparent;
+    color: black;
+    transform: scale(1.50, 1.50);
+}
+
+
+/* Contenedor principal */
+
+#content {
+    
+    width: 70%;
+    margin-top: 12rem;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 40px black;
+    background-color: rgba(255, 255, 255, 0.7);
+    min-height: 70rem;
+    padding: 6rem;
+}
+
+
+
+/* About */
+
+.about__info {
+    text-align: center;
+    margin-bottom: 10rem;
+}
+
+.about__info h1 {
+    font-family: "finger";
+    font-size: 4rem;
+}
+
+#hr1 {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.about__info h3,
+.about__info span {
+    font-family: "yanone";
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.about__info__abajo h2,
+.about__info__abajo p {
+    font-family: "yanone";
+}
+
+.about__info__abajo hr {
+    margin-bottom: 3rem;
+}
+
+
+.about__info__abajo p {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* Sección Crear Proyecto */
+
+.container {
+    padding: 20px;
+}
+
+.container .image {
+    float: left;
+    width: 47%;
+}
+
+.container .image img{
+    width: 100%;
+}
+
+.container .data {
+    float: left;
+    width: 49%;
+    margin-left: 1rem;
+}
+
+.container h2 {
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #ccc;
+}
+
+form {
+    width: 80%;
+}
+
+form label {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form textarea {
+    width: 40%;
+    padding: 0.4rem;
+}
+
+form button,
+form input[type="submit"] {
+    display: block;
+    font-size: 1.1rem;
+    padding: 0.6rem;
+    margin-top: 1.2rem;
+    color: white;
+    background-color: rgba(53, 103, 164, 1);
+    border: 1px solid rgba(53, 103, 164, 0.8);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+form input[disabled] {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+form button:hover,
+form input[type="submit"]:hover {
+    background-color: rgb(62, 119, 189);
+    border: 1px solid rgba(59, 113, 179, 0.8);
+}
+
+.form_error {
+    
+    color: red;
+    padding: 0.2rem;
+    margin: 0.4rem;
+}
+
+.message {
+    width: 50%;
+    padding: 0.3rem;
+    border: 1ps solid #eee;
+}
+
+.success {
+    background-color: green;
+    color: white;
+}
+
+.message a{
+    color: white;
+}
+
+.failed {
+    background-color: red;
+    color: white;
+}
+
+
+
+
+/* Pagina de proyectos */
+
+.project {
+    list-style: none;
+    display: block;
+    float: left;
+    width: 25%;
+    text-align: center;
+    margin: 0.7rem 2rem;
+}
+
+.project .image {
+    width: 100%;
+    max-height: 12rem;
+    margin: 1.5rem auto;
+}
+
+.project img{
+    width: 100%;
+}
+
+
+.project a {
+    text-decoration: none;
+    color: black;
+}
+
+.information {
+    margin-top: 1rem !important;
+}
+
+.button-edit,
+.button-remove {
+    width: 50%;
+    height: 2.8rem;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    margin: 10px;
+    color: white
+}
+
+.button-edit {
+    background-color: #E4A92C;
+    border: none;
+}
+
+.button-edit:hover {
+    background-color: #f8b930;
+}
+
+.button-remove {
+    background-color: #E42C3A;
+    border: none;
+}
+
+.button-remove:hover {
+    background-color: #f72e3f;
+}
+
+.msg_delete {
+    font-size: 1.5rem;
+    display: block;
+    color: red;
+    font-weight: bold;
+    margin: 2rem auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Pie de página */
+
+
+footer {
+    width: 70%;
+    margin: 1rem auto;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
