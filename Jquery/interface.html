@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="js/jquery-ui-1.13.0/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.13.0/jquery-ui.theme.min.css">
+    <script src="js/jquery-ui-1.13.0/jquery-ui.min.js"></script>
+    <title>jQuery UI</title>
+</head>
+<body>
+
+    
+    <style>
+        .elemento {
+            width: 300px;
+            height: 200px;
+            border: 4px solid black;
+            background-color: lightblue;
+            margin: 3rem;
+            float: left;
+        }
+
+        .juegos li{
+            width: 80%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            list-style: none;
+            cursor: pointer;
+        }
+
+        ul .ui-selecting {background-color: green;}
+        ul .ui-selected {background-color: blue;}
+
+        #elemento-movido {
+            width: 100px;
+            height: 100px;
+            border: 5px solid red;
+        }
+
+        #area {
+            width: 300px;
+            height: 300px;
+            border: 5px solid green;
+        }
+
+        .elemento {
+            width: 300px;
+            height: 200px;
+            float: none;
+            display: none;
+        }
+
+        .no-ver {
+            display: none;
+        }
+
+
+
+    </style>
+
+
+
+
+
+
+
+<h1>Aprendiendo jQuery - jQuery UI</h1>
+
+
+<!-- Tooltip / cuadros de texto que explican cosas  -->
+
+    <hr>
+
+    <h3>Tooltip</h3>
+    <a href="#" title="Acceder a la sesion de mis datos de esta web">Mis Datos</a>
+    <a href="#" title="Logueate en esta web">Identificarse</a>
+    <a href="#" title="Ver todos mis amigos">Amigos</a>
+
+
+    <hr>
+
+<!-- Popup -->
+
+    <hr>
+
+    <h3>Cuadros de dialogo</h3>
+    
+    <button id="lanzar">Lanzame</button>
+
+    <div id="popup"  class="no-ver" title="¿Estas seguro?">
+        <p>
+            Si continuas en el curso aprenderas mucho de JavaScript inevitablemente
+        </p>
+    </div>
+
+
+    <hr>
+
+<!-- Calendario -->
+    <hr>
+
+    <h3>Calendario</h3>
+    
+    <input type="text" name="hola" id="calendario" autocomplete="off">
+
+
+<!-- Pestañas -->
+    <hr>
+
+    <h3>Pestañas</h3>
+    
+    <div id="pestanas">
+        <ul>
+            <li><a href="#tabs-1">Pestaña 1</a></li>
+            <li><a href="#tabs-2">Pestaña 2</a></li>
+            <li><a href="#tabs-3">Pestaña 3</a></li>
+        </ul>
+
+        
+    <div id="tabs-1">
+        Hola, soy la primera pestaña
+    </div>
+
+    <div id="tabs-2">
+        Hola, soy la segunda pestaña
+    </div>
+
+    <div id="tabs-3">
+        Hola, soy la tercera pestaña
+    </div>
+
+    </div>
+
+
+
+<!-- Eventos de jQuery -->
+
+
+    <hr>
+
+    <button id="mostrar">Mostrar</button><br>
+    <div class="caja-efectos elemento"></div><br>
+
+    <div id="elemento-movido"></div>
+    <br>
+    <div id="area"></div>
+
+    <ul class="juegos">
+        <li>GTA 5</li>
+        <li>Need For Speed</li>
+        <li>Crash Bandicoot</li>
+        <li>Super Mario</li>
+        <li>Galaxian</li>
+    </ul>
+
+
+
+
+
+
+
+
+
+    <div class="elemento">
+        Hola, soy un elemento de la web 1
+    </div>
+
+    <div class="elemento">
+        Hola, soy un elemento de la web 2
+    </div>
+
+    <div class="elemento">
+        Hola, soy un elemento de la web 3
+    </div>
+
+
+
+    <footer>
+        <script src="js/java6.js"></script>
+    </footer>
+
+</body>
+</html>

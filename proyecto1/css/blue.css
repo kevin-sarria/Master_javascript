@@ -1,0 +1,24 @@
+:root{
+    --azul: #1F87C4;
+    --blanco: white;
+}
+
+body {
+    background: url('../img/cielo.jpg');
+    background-attachment: fixed;
+}
+
+#logo {
+    background: var(--azul);
+}
+
+
+#menu ul li:hover {
+    background: var(--azul);
+}
+
+.button-more{
+    background: var(--azul);
+
+}
+
